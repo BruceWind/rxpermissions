@@ -9,18 +9,19 @@ rxpermissions
                 //开始
                 RxPermissions.getInstance(MainActivity.this)
                         .request(Manifest.permission.CAMERA)
-                        .subscribe(new OnPermissionsCallback() {
+                        .callback(new OnPermissionsCallback() {
                             @Override
                             public void call(Boolean aBoolean) {
-                                toast(""+aBoolean);//显示成功与否
+                                toast("" + aBoolean);
                             }
                         });
                 //结束
+
                 
                 //lambda结构
                 RxPermissions.getInstance(MainActivity.this)
                 .request(Manifest.permission.CAMERA)
-                .subscribe((Boolean aBoolean)-> toast(""+aBoolean) });//显示成功与否
+                .callback((Boolean aBoolean)-> toast(""+aBoolean) });//显示成功与否
 
 
 ```

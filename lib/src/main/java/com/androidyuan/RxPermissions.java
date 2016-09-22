@@ -9,6 +9,9 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.androidyuan.component.Permission;
+import com.androidyuan.component.RxPermissionRequest;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -100,10 +103,10 @@ public class RxPermissions {
     /**
      * 立即请求权限,调用必须在应用程序的初始化阶段
      */
-    public Observable<Boolean> request(final String... permissions) {
+    public RxPermissionRequest request(final String... permissions) {
 
-        return Observable.just(null).compose(ensure(permissions))
-                .subscribeOn(AndroidSchedulers.mainThread());
+        return new RxPermissionRequest(Observable.just(null).compose(ensure(permissions))
+                .subscribeOn(AndroidSchedulers.mainThread()));
     }
 
     /**

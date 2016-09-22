@@ -1,14 +1,14 @@
 package rxcomponent.wei.rxpermissions;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.Manifest;
 import android.hardware.Camera;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.component.RxPermissions;
-import rx.functions.Action1;
+
+import com.androidyuan.RxPermissions;
+import com.androidyuan.component.OnPermissionsCallback;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,12 +31,10 @@ public class MainActivity extends AppCompatActivity {
                 //开始
                 RxPermissions.getInstance(MainActivity.this)
                         .request(Manifest.permission.CAMERA)
-                        .subscribeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new Action1<Boolean>() {
-
+                        .callback(new OnPermissionsCallback() {
                             @Override
-                            public void call(Boolean aBoolean) {//权限回调
-                                toast(aBoolean + "");
+                            public void call(Boolean aBoolean) {
+                                toast("" + aBoolean);
                             }
                         });
                 //结束

@@ -20,7 +20,7 @@
         </activity>
 
         <!-- 设置透明 notitlebar -->
-        <activity android:name="rx.component.PermissionReqActivity"
+        <activity android:name="com.androidyuan.PermissionReqActivity"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
     </application>

@@ -4,21 +4,21 @@ Just want to let the authority to apply for more easy and convenient management
 # use
 ```
 //begin
-RxPermissions. GetInstance (MainActivity. This)
-Request (Manifest. Permission. CAMERA)
-The subscribe (new OnPermissionsCallback () {
-@ Override
-Public void call (Boolean aBoolean) {
-Toast (" "+ aBoolean); // show a success
-}
-});
+RxPermissions.getInstance(MainActivity.this)
+                        .request(Manifest.permission.CAMERA)
+                        .callback(new OnPermissionsCallback() {
+                            @Override
+                            public void call(Boolean aBoolean) {
+                                toast("" + aBoolean);
+                            }
+                        });
 // end
 
 
 // lambda structure
-RxPermissions. GetInstance (MainActivity. This)
-Request (Manifest. Permission. CAMERA)
-The subscribe ((Boolean aBoolean) - > toast (" "+ aBoolean)}); // show a success
+                        RxPermissions.getInstance(MainActivity.this)
+                        .request(Manifest.permission.CAMERA)
+                        .callback((Boolean aBoolean) -> toast("" + aBoolean) ); // show a success
 ```
 
 ## features

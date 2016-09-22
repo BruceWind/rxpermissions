@@ -1,4 +1,4 @@
-package com.androidyuan;
+package com.androidyuan.component;
 
 /**
  * Created by wei on 16-9-17.
