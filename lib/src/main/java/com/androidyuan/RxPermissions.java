@@ -1,4 +1,4 @@
-package rx.component;
+package com.androidyuan;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.subjects.PublishSubject;
 
@@ -26,6 +27,13 @@ public class RxPermissions {
     public static final String TAG = "RxPermissions";
 
     static RxPermissions sSingleton;
+    private Context mCtx;
+    private Map<String, PublishSubject<Permission>> mSubjects = new HashMap<>();
+
+    RxPermissions(Context ctx) {
+
+        mCtx = ctx;
+    }
 
     public static RxPermissions getInstance(Context ctx) {
 
@@ -34,17 +42,6 @@ public class RxPermissions {
         }
         return sSingleton;
     }
-
-    private Context mCtx;
-
-    private Map<String, PublishSubject<Permission>> mSubjects = new HashMap<>();
-
-
-    RxPermissions(Context ctx) {
-
-        mCtx = ctx;
-    }
-
 
     private void log(String message) {
 
@@ -105,7 +102,8 @@ public class RxPermissions {
      */
     public Observable<Boolean> request(final String... permissions) {
 
-        return Observable.just(null).compose(ensure(permissions));
+        return Observable.just(null).compose(ensure(permissions))
+                .subscribeOn(AndroidSchedulers.mainThread());
     }
 
     /**

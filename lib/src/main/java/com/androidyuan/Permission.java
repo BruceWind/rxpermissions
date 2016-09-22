@@ -1,4 +1,4 @@
-package rx.component;
+package com.androidyuan;
 
 /**
  * Created by wei on 16-9-17.
