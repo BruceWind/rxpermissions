@@ -24,6 +24,7 @@ The subscribe ((Boolean aBoolean) - > toast (" "+ aBoolean)}); // show a success
 ## features
 
 1. Easy to use (than the official plan is convenient, while allowing the child thread application, the callback is always in the main thread)
+
 2. Efficient, can apply for multiple) at the same time
 ## note:
 > - Need to be registered in mainfast  
