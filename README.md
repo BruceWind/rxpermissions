@@ -1,2 +1,24 @@
-# rxpermissions
+# RxPermissions
 rxpermissions
+
+只是想要让权限申请管理更加简单方便
+
+# 特性
+
+1.易用（比官方的方案方便）
+2.高效（可以同时申请多个）
+
+## 注意：
+
+> - 使用中需要在mainfast中注册
+
+```
+
+        <!-- 设置透明 notitlebar -->
+        <activity android:name="rx.component.PermissionReqActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+```
+> - 申请过程因为是启动一个新的透明的Activity，所以很容易发生申请的act多次触发onPause,onResume的情况。
+
+
+
