@@ -1,4 +1,4 @@
-package com.androidyuan.permission.component;
+package com.androidyuan.rxpermissions.component;
 
 import rx.functions.Action1;
 

@@ -6,6 +6,12 @@ rxpermissions
 # 使用 
 
 ```
+
+            
+        <!-- 设置透明 notitlebar -->
+        <activity android:name="com.androidyuan.rxpermissions.PermissionReqActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
                 //开始
                 RxPermissions.getInstance(MainActivity.this)
                         .request(Manifest.permission.CAMERA)

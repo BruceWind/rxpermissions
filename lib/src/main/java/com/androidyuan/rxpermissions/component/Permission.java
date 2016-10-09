@@ -1,4 +1,4 @@
-package com.androidyuan.permission.component;
+package com.androidyuan.rxpermissions.component;
 
 /**
  * Created by wei on 16-9-17.

@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.androidyuan.permission.RxPermissions;
-import com.androidyuan.permission.component.OnPermissionsCallback;
+import com.androidyuan.rxpermissions.RxPermissions;
+import com.androidyuan.rxpermissions.component.OnPermissionsCallback;
 
 public class MainActivity extends AppCompatActivity {
 
