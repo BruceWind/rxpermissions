@@ -1,4 +1,4 @@
-package com.androidyuan;
+package com.androidyuan.permission;
 
 import android.app.Activity;
 import android.content.Intent;

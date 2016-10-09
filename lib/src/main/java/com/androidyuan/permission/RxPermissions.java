@@ -1,4 +1,4 @@
-package com.androidyuan;
+package com.androidyuan.permission;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -9,8 +9,8 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.androidyuan.component.Permission;
-import com.androidyuan.component.RxPermissionRequest;
+import com.androidyuan.permission.component.Permission;
+import com.androidyuan.permission.component.RxPermissionRequest;
 
 import java.util.ArrayList;
 import java.util.HashMap;

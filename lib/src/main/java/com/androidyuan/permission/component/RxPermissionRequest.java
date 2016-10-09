@@ -1,4 +1,4 @@
-package com.androidyuan.component;
+package com.androidyuan.permission.component;
 
 import rx.Observable;
 
@@ -15,7 +15,7 @@ public class RxPermissionRequest {
 
 
     public void callback(OnPermissionsCallback callback) {
-
+        mBooleanObservable.subscribe(callback);
     }
 
 }
